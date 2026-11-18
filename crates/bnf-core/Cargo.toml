@@ -1,0 +1,21 @@
+[package]
+name = "bnf-core"
+description = "no_std safety and authentication kernel for neural stimulation implants"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+ml-kem.workspace = true
+blake3.workspace = true
+rand_core.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+getrandom.workspace = true
+proptest.workspace = true
+
+[lints]
+workspace = true

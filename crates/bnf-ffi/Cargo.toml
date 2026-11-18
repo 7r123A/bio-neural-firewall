@@ -1,0 +1,21 @@
+[package]
+name = "bnf-ffi"
+description = "C ABI bridge exposing bnf-core to the Python simulation harness"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+bnf-core = { path = "../bnf-core" }
+getrandom.workspace = true
+rand_core.workspace = true
+zeroize.workspace = true
+
+[lints]
+workspace = true

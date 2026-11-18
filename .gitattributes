@@ -1,0 +1,5 @@
+# Normalise line endings so rustfmt and CI behave identically on every OS.
+* text=auto eol=lf
+*.dll binary
+*.so binary
+*.dylib binary

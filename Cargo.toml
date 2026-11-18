@@ -1,0 +1,40 @@
+[workspace]
+resolver = "2"
+members = ["crates/bnf-core", "crates/bnf-ffi"]
+
+[workspace.package]
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.87"
+license = "MIT"
+repository = "https://github.com/اسم_حسابك/bio-neural-firewall"
+
+[workspace.dependencies]
+ml-kem = { version = "0.3.4", default-features = false, features = ["zeroize"] }
+blake3 = { version = "1.8", default-features = false, features = ["zeroize"] }
+rand_core = { version = "0.10", default-features = false }
+zeroize = { version = "1.8", default-features = false, features = ["zeroize_derive"] }
+getrandom = { version = "0.4", features = ["sys_rng"] }
+proptest = "1.12"
+
+[workspace.lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+missing_docs = "warn"
+unused_qualifications = "warn"
+unreachable_pub = "warn"
+
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+undocumented_unsafe_blocks = "warn"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+
+# Optimise dependencies (ML-KEM, BLAKE3, proptest) even in debug/test builds so
+# the property tests run in seconds while our own code keeps debug assertions.
+[profile.dev.package."*"]
+opt-level = 3
