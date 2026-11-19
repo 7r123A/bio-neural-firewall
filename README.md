@@ -2,7 +2,7 @@
 
 **An open-source, `no_std` authentication and charge-safety kernel that sits between a BCI host computer and the stimulation front-end of a neural implant.**
 
-[![CI](https://github.com/اسم_حسابك/bio-neural-firewall/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
+[![CI](https://github.com/7r123A/bio-neural-firewall/actions/workflows/ci.yml/badge.svg)](https://github.com/7r123A/bio-neural-firewall/actions/workflows/ci.yml)
 ![Rust](https://img.shields.io/badge/rust-1.87%2B-orange)
 ![no_std](https://img.shields.io/badge/no__std-no__alloc-blue)
 ![unsafe](https://img.shields.io/badge/kernel-forbid(unsafe__code)-success)
@@ -507,7 +507,7 @@ Notes:
 ### 7.2 Build and test the kernel
 
 ```bash
-git clone https://github.com/اسم_حسابك/bio-neural-firewall.git
+git clone https://github.com/7r123A/bio-neural-firewall.git
 cd bio-neural-firewall
 
 cargo test --workspace                                   # unit, property, integration, C ABI and doc tests

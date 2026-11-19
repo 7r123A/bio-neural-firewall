@@ -7,7 +7,7 @@ version = "0.2.0"
 edition = "2024"
 rust-version = "1.87"
 license = "MIT"
-repository = "https://github.com/اسم_حسابك/bio-neural-firewall"
+repository = "https://github.com/7r123A/bio-neural-firewall"
 
 [workspace.dependencies]
 ml-kem = { version = "0.3.4", default-features = false, features = ["zeroize"] }
